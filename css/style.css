@@ -84,6 +84,529 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Global layout */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #222;
+  background-color: #f5f7fa;
+}
+
+main {
+  padding: 2rem 1rem 4rem;
+}
+
+section {
+  margin: 0 auto 3rem;
+  max-width: 1100px;
+}
+
+/* Header and navigation */
+
+.site-header {
+  background-color: #003b6d;
+  color: #ffffff;
+}
+
+.main-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #e7edf5;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.main-nav a.active {
+  background-color: #ffffff;
+  color: #003b6d;
+  font-weight: 600;
+}
+
+/* Primary CTA in nav */
+
+.main-nav .cta-nav {
+  background-color: #ffaa3b;
+  color: #222222;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+}
+
+.main-nav .cta-nav:hover {
+  background-color: #ffbe66;
+  color: #111111;
+}
+
+.main-nav .cta-nav.active {
+  background-color: #ffffff;
+  color: #003b6d;
+}
+
+/* Hero section */
+
+.hero,
+.thankyou-hero {
+  background-color: #e4f0fb;
+  border-radius: 0.75rem;
+  padding: 2.5rem 1.75rem;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1,
+.thankyou-hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+}
+
+.hero p,
+.thankyou-hero p {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background-color: #ffaa3b;
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.hero-cta:hover {
+  background-color: #ffbe66;
+  transform: translateY(-1px);
+}
+
+/* Generic cards and lists */
+
+.info-cards,
+.lodging-highlights,
+.food-highlights,
+.top-attractions,
+.travel-essentials,
+.quick-facts,
+.contact-section,
+.add-on-attractions,
+.dining-reservations {
+  margin-top: 2.5rem;
+}
+
+.info-cards .card,
+.lodging-card,
+.food-card,
+.attraction-card,
+.essential-card,
+.fact-card,
+.contact-card,
+.accommodation-card,
+.dining-card,
+.tip-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.info-cards .card:hover,
+.lodging-card:hover,
+.food-card:hover,
+.attraction-card:hover,
+.essential-card:hover,
+.fact-card:hover,
+.contact-card:hover,
+.accommodation-card:hover,
+.dining-card:hover,
+.tip-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Shared image placeholder */
+
+.image-placeholder {
+  background-color: #d8e2f0;
+  border-radius: 0.5rem;
+  height: 140px;
+  margin-bottom: 0.9rem;
+}
+
+/* Layout grids */
+
+.info-cards,
+.lodging-list,
+.food-list,
+.attraction-list,
+.essentials-list,
+.facts-list,
+.contact-cards,
+.dining-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 700px) {
+  .info-cards,
+  .lodging-list,
+  .food-list,
+  .attraction-list,
+  .essentials-list,
+  .facts-list,
+  .contact-cards,
+  .dining-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Filter buttons */
+
+.attraction-filters,
+.lodging-filters,
+.food-filters {
+  margin: 2rem auto 1.5rem;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #c4d2e3;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.filter-btn:hover {
+  background-color: #003b6d;
+  color: #ffffff;
+  border-color: #003b6d;
+}
+
+/* Horizontal strips and scroll indicators */
+
+.horizontal-strip {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.scroll-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+}
+
+.scroll-indicators .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #c4cfdb;
+}
+
+.scroll-indicators .dot.active {
+  background-color: #003b6d;
+}
+
+/* Links inside cards */
+
+.card-link,
+.more-link,
+.checkout-link,
+.action-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #003b6d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-link:hover,
+.more-link:hover,
+.checkout-link:hover,
+.action-link:hover {
+  text-decoration: underline;
+}
+
+/* More to Explore section */
+
+.more-to-explore h2 {
+  margin-bottom: 1rem;
+}
+
+.explore-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.explore-item {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  border: 1px solid #cfd8e3;
+  text-decoration: none;
+  color: #003b6d;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.explore-item:hover {
+  background-color: #003b6d;
+  color: #ffffff;
+  border-color: #003b6d;
+}
+
+/* Planning guide and booking layout */
+
+.planning-guide .steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.planning-guide .step {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.choose-lodging .lodging-selection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.lodging-selectors {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.lodging-selectors label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.input-placeholder {
+  border-radius: 0.5rem;
+  border: 1px solid #cfd8e3;
+  background-color: #f8fafc;
+  height: 2.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.check-availability-btn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #003b6d;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.check-availability-btn:hover {
+  background-color: #00529a;
+}
+
+/* Select buttons */
+
+.select-btn,
+.complete-booking-btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #003b6d;
+  color: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.select-btn:hover,
+.complete-booking-btn:hover {
+  background-color: #00529a;
+}
+
+/* Checkout & Thank You */
+
+.checkout-summary {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.summary-details {
+  margin: 1.5rem 0;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.summary-item + .summary-item {
+  margin-top: 0.75rem;
+}
+
+.checkout-links,
+.thankyou-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.thankyou-hero {
+  text-align: center;
+}
+
+.confirmation-details {
+  margin: 2rem auto;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.confirmation-item + .confirmation-item {
+  margin-top: 0.75rem;
+}
+
+/* Reviews section */
+
+.reviews {
+  margin-top: 2.5rem;
+}
+
+.review-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.review-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.review-author {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.6rem;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid #d3dde8;
+  padding: 1.25rem 1rem 2rem;
+  background-color: #ffffff;
+  margin-top: 2rem;
+}
+
+.site-footer .footer-links {
+  max-width: 1100px;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-footer .footer-links a {
+  font-size: 0.9rem;
+  color: #003b6d;
+  text-decoration: none;
+}
+
+.site-footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+.site-footer p {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Responsive tweaks */
+
+@media (min-width: 800px) {
+  main {
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  .choose-lodging .lodging-selection {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
+    align-items: flex-start;
+  }
+
+  .review-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
