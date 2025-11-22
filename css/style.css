@@ -175,12 +175,16 @@ section {
 .hero,
 .thankyou-hero {
   background-color: #e4f0fb;
-  border-radius: 0.75rem;
-  padding: 2.5rem 1.75rem;
+  border-radius: 0;
+  padding: 3.5rem 1.75rem;
+  margin: 0 -1rem 3rem;   /* cancel main's horizontal padding on mobile */
+  max-width: none;
+  min-height: 320px;
 }
 
 .hero-content {
   max-width: 700px;
+  margin: 0 auto;    /* center text inside the full-width hero */
 }
 
 .hero h1,
@@ -194,6 +198,99 @@ section {
   margin: 0 0 1.5rem;
   font-size: 1rem;
   color: #444;
+}
+
+/* Hero background images with overlay */
+
+.hero-home {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../img/hero-home.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero-home p {
+  color: #f4f4f4;
+}
+
+.hero-attractions {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../img/hero-attractions.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero-attractions p {
+  color: #f4f4f4;
+}
+
+.hero-lodging {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../img/hero-lodging.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero-lodging p {
+  color: #f4f4f4;
+}
+
+.hero-food {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../img/hero-food.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero-food p {
+  color: #f4f4f4;
+}
+
+.hero-travel {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../img/hero-travel.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero-travel p {
+  color: #f4f4f4;
+}
+
+.hero-about {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../img/hero-about.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero-about p {
+  color: #f4f4f4;
+}
+
+.hero-booking {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../img/hero-booking.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero-booking p {
+  color: #f4f4f4;
 }
 
 .hero-cta {
@@ -594,7 +691,7 @@ section {
 
 @media (min-width: 800px) {
   main {
-    padding: 2.5rem 2rem 4rem;
+    padding: 0 1rem 4rem;
   }
 
   .choose-lodging .lodging-selection {
@@ -604,6 +701,13 @@ section {
 
   .review-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero,
+  .thankyou-hero {
+    min-height: 420px;
+    padding: 4rem 2rem;
+    margin: 0 -2rem 3rem;   /* cancel main's 2rem horizontal padding on desktop */
   }
 }
 
