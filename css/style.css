@@ -100,12 +100,11 @@ body {
 }
 
 main {
-  padding: 2rem 1rem 4rem;
+  padding: 2rem 3rem 4rem;
 }
 
 section {
   margin: 0 auto 3rem;
-  max-width: 1100px;
 }
 
 /* Header and navigation */
@@ -116,9 +115,10 @@ section {
 }
 
 .main-nav {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 0.75rem 3rem;
+  display: flex;
+  align-items: center;        /* vertically center logo + nav links */
+  justify-content: space-between; /* logo on the left, links pushed to the right */
 }
 
 .main-nav ul {
@@ -128,7 +128,25 @@ section {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap;     /* allow wrapping on smaller screens */
+}
+
+.main-nav .site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main-nav .site-logo svg {
+  width: 24px;
+  height: 24px;
+}
+
+.main-nav .site-logo span {
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .main-nav a {
@@ -177,9 +195,19 @@ section {
   background-color: #e4f0fb;
   border-radius: 0;
   padding: 3.5rem 1.75rem;
-  margin: 0 -1rem 3rem;   /* cancel main's horizontal padding on mobile */
+  margin: 0 -3rem 3rem;   /* cancel main's horizontal padding on mobile */
   max-width: none;
   min-height: 320px;
+}
+
+.hero,
+.thankyou-hero {
+  display: flex;
+  align-items: center;       /* vertical centering */
+  justify-content: center;   /* horizontal centering */
+  text-align: center;        /* keeps headings centered */
+
+  flex-direction: column;    /* keeps text stacked */
 }
 
 .hero-content {
@@ -400,7 +428,6 @@ section {
 .lodging-filters,
 .food-filters {
   margin: 2rem auto 1.5rem;
-  max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -663,7 +690,6 @@ section {
 }
 
 .site-footer .footer-links {
-  max-width: 1100px;
   margin: 0 auto 0.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -681,7 +707,6 @@ section {
 }
 
 .site-footer p {
-  max-width: 1100px;
   margin: 0 auto;
   font-size: 0.8rem;
   color: #666;
@@ -691,7 +716,7 @@ section {
 
 @media (min-width: 800px) {
   main {
-    padding: 0 1rem 4rem;
+    padding: 0 3rem 4rem;
   }
 
   .choose-lodging .lodging-selection {
@@ -707,7 +732,7 @@ section {
   .thankyou-hero {
     min-height: 420px;
     padding: 4rem 2rem;
-    margin: 0 -2rem 3rem;   /* cancel main's 2rem horizontal padding on desktop */
+    margin: 0 -3rem 3rem;   /* cancel main's 3rem horizontal padding on desktop */
   }
 }
 
