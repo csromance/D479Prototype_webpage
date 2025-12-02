@@ -195,7 +195,7 @@ section {
   background-color: #e4f0fb;
   border-radius: 0;
   padding: 3.5rem 1.75rem;
-  margin: 0 -3rem 3rem;   /* cancel main's horizontal padding on mobile */
+  margin: 0 -3rem 0;   /* cancel main's horizontal padding on mobile */
   max-width: none;
   min-height: 320px;
 }
@@ -354,6 +354,7 @@ section {
   margin-top: 2.5rem;
 }
 
+.feature-card,
 .info-cards .card,
 .lodging-card,
 .food-card,
@@ -371,6 +372,7 @@ section {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+.feature-card:hover,
 .info-cards .card:hover,
 .lodging-card:hover,
 .food-card:hover,
@@ -528,6 +530,168 @@ section {
   border-color: #003b6d;
 }
 
+/* Feature links (mini hero section on home page) */
+
+.feature-links {
+  margin: 0 -3rem 3rem;   /* full-bleed like the main hero on mobile */
+  padding: 2rem 0 0;      /* vertical breathing room, no side padding */
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;                 /* remove extra gutters so tiles feel edge-to-edge */
+}
+
+/* Full-bleed mini hero tiles */
+
+.feature-card {
+  position: relative;
+  border-radius: 0;              /* no card corners – mini hero feel */
+  overflow: hidden;
+  min-height: 320px;             /* make the tiles taller/more “hero” sized */
+  padding: 1.75rem 2rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: none;              /* drop card shadow */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+/* Dark gradient overlay so text is readable */
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  z-index: 0;
+}
+
+/* Make text sit above overlay */
+.feature-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.25rem;
+}
+
+.feature-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: #f3f5f8;
+}
+
+.feature-card .card-link {
+  margin-top: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffbe66;
+}
+
+.feature-card .card-link:hover {
+  text-decoration: underline;
+}
+
+/* Hover effect: subtle lift + stronger shadow */
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);      /* subtle “hero” hover instead of card shadow */
+}
+
+/* Tagline / intro above mini hero tiles */
+
+.feature-links-header {
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+  padding: 0 1rem;
+  text-align: center;
+  color: #1f2933;
+}
+
+.feature-links-header h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.feature-links-header p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #4b5563;
+}
+
+/* Specific background images per tile
+   Point these to whatever actual images you're using. */
+
+.feature-beaches {
+  background-image: url("../img/landscapes/feature-beach.jpg");
+}
+
+.feature-rainforest {
+  background-image: url("../img/landscapes/feature-rainforest.jpg");
+}
+
+.feature-culture {
+  background-image: url("../img/culture/feature-culture.jpg"); /* or your market/food shot */
+}
+
+.feature-lodging {
+  background-image: url("../img/resorts/feature-lodging.jpg");
+}
+
+@media (min-width: 800px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .feature-links {
+    margin: 0 -4rem 3rem;   /* match hero full-bleed on desktop */
+    padding: 1.75rem 0 0;    /* only vertical padding so tiles touch page edge */
+  }
+}
+
+/* Thumbnail images inside info cards */
+
+/* Thumbnail images inside info cards */
+
+.card-image {
+  height: 90px;
+  border-radius: 0.6rem;
+  margin-bottom: 0.75rem;
+  background-color: #d8e2f0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Specific thumbnails for home info cards */
+.card-image-getting-here {
+  background-image: url("../img/travel/hero-travel.jpg");
+}
+
+.card-image-getting-around {
+  background-image: url("../img/travel/card-getting-around.jpg");
+}
+
+.card-image-visitor-essentials {
+  background-image: url("../img/landscapes/card-visitor-essentials.jpg");
+}
+
+
 /* Planning guide and booking layout */
 
 .planning-guide .steps {
@@ -680,6 +844,57 @@ section {
   margin-top: 0.6rem;
 }
 
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.review-rating {
+  font-size: 0.9rem;
+  color: #f6b436; /* star yellow */
+  margin-bottom: 0.4rem;
+}
+
+.review-rating .star {
+  margin-right: 2px;
+}
+
+.review-rating .star.empty {
+  color: #d2d6df; /* muted for unfilled stars */
+}
+
+.review-controls {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.review-nav {
+  border-radius: 999px;
+  border: 1px solid #cfd8e3;
+  background-color: #ffffff;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #003b6d;
+}
+
+.review-nav:hover {
+  background-color: #003b6d;
+  color: #ffffff;
+  border-color: #003b6d;
+}
+
+.review-card.hidden {
+  display: none;
+}
+
 /* Footer */
 
 .site-footer {
@@ -716,7 +931,7 @@ section {
 
 @media (min-width: 800px) {
   main {
-    padding: 0 3rem 4rem;
+    padding: 0 4rem 4rem;
   }
 
   .choose-lodging .lodging-selection {
@@ -732,7 +947,7 @@ section {
   .thankyou-hero {
     min-height: 420px;
     padding: 4rem 2rem;
-    margin: 0 -3rem 3rem;   /* cancel main's 3rem horizontal padding on desktop */
+    margin: 0 -4rem;   /* cancel main's 3rem horizontal padding on desktop */
   }
 }
 
