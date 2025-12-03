@@ -451,6 +451,12 @@ section {
   border-color: #003b6d;
 }
 
+.filter-btn.active {
+  background-color: #003b6d;
+  color: #ffffff;
+  border-color: #003b6d;
+}
+
 /* Horizontal strips and scroll indicators */
 
 .horizontal-strip {
@@ -473,6 +479,9 @@ section {
   height: 8px;
   border-radius: 50%;
   background-color: #c4cfdb;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .scroll-indicators .dot.active {
@@ -670,7 +679,7 @@ section {
 /* Thumbnail images inside info cards */
 
 .card-image {
-  height: 90px;
+  height: 150px;
   border-radius: 0.6rem;
   margin-bottom: 0.75rem;
   background-color: #d8e2f0;
@@ -691,6 +700,430 @@ section {
   background-image: url("../img/landscapes/card-visitor-essentials.jpg");
 }
 
+/* Specific thumbnails for attractions cards */
+.card-image-attraction-beaches {
+  background-image: url("../img/landscapes/card-attraction-beaches.jpg");
+}
+
+.card-image-attraction-snorkeling {
+  background-image: url("../img/adventure/card-attraction-snorkeling.jpg");
+}
+
+.card-image-attraction-rainforest {
+  background-image: url("../img/landscapes/card-attraction-rainforest.jpg");
+}
+
+.card-image-attraction-volcano {
+  background-image: url("../img/adventure/card-attraction-volcano.jpg");
+}
+
+.card-image-attraction-markets {
+  background-image: url("../img/culture/card-attraction-markets.jpg");
+}
+
+.card-image-attraction-culture {
+  background-image: url("../img/culture/card-attraction-centers.jpg");
+}
+
+/* Featured experience strip image */
+.card-image-featured-experience {
+  background-image: url("../img/adventure/card-featured-experience.jpg");
+}
+
+/* Thumbnails for Attractions "More to Explore" grid */
+.card-image-explore-bikes {
+  background-image: url("../img/adventure/card-explore-bikes.jpg");
+}
+
+.card-image-explore-boat {
+  background-image: url("../img/travel/card-explore-boat.jpg");
+}
+
+.card-image-explore-fishing {
+  background-image: url("../img/adventure/card-explore-fishing.jpg");
+}
+
+.card-image-explore-gardens {
+  background-image: url("../img/landscapes/card-explore-gardens.jpg");
+}
+
+/* Thumbnails for Lodging cards */
+.card-image-lodging-sunset {
+  background-image: url("../img/resorts/feature-lodging.jpg");
+}
+
+.card-image-lodging-rainforest {
+  background-image: url("../img/resorts/card-lodging-rainforest.jpg");
+}
+
+.card-image-lodging-coral {
+  background-image: url("../img/resorts/card-lodging-coral.jpg");
+}
+
+/* Featured lodging strip image */
+.card-image-featured-stay {
+  background-image: url("../img/resorts/hero-booking.jpg");
+}
+
+/* Thumbnails for Lodging "More to Explore" grid */
+.card-image-explore-overwater {
+  background-image: url("../img/resorts/feature-lodging.jpg");
+}
+
+.card-image-explore-lagoon {
+  background-image: url("../img/resorts/hero-booking.jpg");
+}
+
+.card-image-explore-garden {
+  background-image: url("../img/resorts/card-lodging-rainforest.jpg");
+}
+
+.card-image-explore-beach {
+  background-image: url("../img/resorts/card-lodging-coral.jpg");
+}
+
+/* Thumbnails for Food cards */
+.card-image-food-harbor {
+  background-image: url("../img/food/card-harbor-front-grill.jpg");
+}
+
+.card-image-food-rainforest {
+  background-image: url("../img/food/card-rainforest-cafe.jpg");
+}
+
+.card-image-food-coral {
+  background-image: url("../img/food/card-coral-view.jpg");
+}
+
+/* Featured dining strip image */
+.card-image-featured-dining {
+  background-image: url("../img/food/card-featured-dining.jpg");
+}
+
+/* Attractions – More to Explore image grid */
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0 1.75rem;
+}
+
+.explore-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.explore-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.explore-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555f6b;
+}
+
+/* Featured experience card layout inside horizontal strip */
+/* Turn this into a full-width image strip with overlayed text */
+
+.featured-experience {
+  margin: 3rem 0 0;       /* align with main content width */
+  padding: 0 0 2.5rem;    /* keep space below the strip */
+}
+
+.featured-experience .horizontal-strip {
+  position: relative;
+  padding: 0;                  /* remove inner card padding */
+  margin: 1.5rem 0 0;
+  border-radius: 0.75rem;
+  background-color: transparent;
+  box-shadow: none;
+  overflow: hidden;            /* make sure image + overlay clip to rounded corners */
+}
+
+.featured-experience .experience-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  min-height: 260px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+}
+
+/* Make the image span the full card as a background layer */
+.featured-experience .experience-card .card-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  margin: 0;
+  border-radius: inherit;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark gradient overlay for readability */
+.featured-experience .experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  z-index: 0;
+}
+
+.featured-experience .experience-card h3,
+.featured-experience .experience-card p,
+.featured-experience .experience-card .card-link {
+  position: relative;
+  z-index: 1;
+}
+
+.featured-experience .experience-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.featured-experience .experience-card p {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #e5edf5;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+}
+
+.featured-experience .experience-card .card-link {
+  font-weight: 600;
+  color: #ffbe66;
+}
+
+/* Move the dots into the top-right over the image */
+.featured-experience .scroll-indicators {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  margin-top: 0;
+  z-index: 2;
+}
+
+/* Keep existing explore-grid desktop behavior */
+@media (min-width: 700px) {
+  .explore-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .featured-experience .experience-card {
+    min-height: 280px;
+    padding: 2.25rem 3rem;
+  }
+}
+
+/* Lodging – Featured Accommodation strip (hero-like card) */
+
+.featured-accommodation {
+  margin: 3rem 0 0;
+  padding: 0 0 2.5rem;
+}
+
+.featured-accommodation .horizontal-strip {
+  position: relative;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  border-radius: 0.75rem;
+  background-color: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.featured-accommodation .experience-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  min-height: 260px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+}
+
+.featured-accommodation .experience-card .card-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  margin: 0;
+  border-radius: inherit;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-accommodation .experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  z-index: 0;
+}
+
+.featured-accommodation .experience-card h3,
+.featured-accommodation .experience-card p,
+.featured-accommodation .experience-card .card-link {
+  position: relative;
+  z-index: 1;
+}
+
+.featured-accommodation .experience-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.featured-accommodation .experience-card p {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #e5edf5;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+}
+
+.featured-accommodation .experience-card .card-link {
+  font-weight: 600;
+  color: #ffbe66;
+}
+
+.featured-accommodation .scroll-indicators {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  margin-top: 0;
+  z-index: 2;
+}
+
+
+@media (min-width: 700px) {
+  .featured-accommodation .experience-card {
+    min-height: 280px;
+    padding: 2.25rem 3rem;
+  }
+}
+
+/* Food – Featured Dining strip (hero-like card) */
+
+.featured-dining {
+  margin: 3rem 0 0;
+  padding: 0 0 2.5rem;
+}
+
+.featured-dining .horizontal-strip {
+  position: relative;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  border-radius: 0.75rem;
+  background-color: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.featured-dining .experience-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  min-height: 260px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+}
+
+.featured-dining .experience-card .card-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  margin: 0;
+  border-radius: inherit;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-dining .experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  z-index: 0;
+}
+
+.featured-dining .experience-card h3,
+.featured-dining .experience-card p,
+.featured-dining .experience-card .card-link {
+  position: relative;
+  z-index: 1;
+}
+
+.featured-dining .experience-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.featured-dining .experience-card p {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #e5edf5;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+}
+
+.featured-dining .experience-card .card-link {
+  font-weight: 600;
+  color: #ffbe66;
+}
+
+.featured-dining .scroll-indicators {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  margin-top: 0;
+  z-index: 2;
+}
+
+@media (min-width: 700px) {
+  .featured-dining .experience-card {
+    min-height: 280px;
+    padding: 2.25rem 3rem;
+  }
+}
 
 /* Planning guide and booking layout */
 
