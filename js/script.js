@@ -147,6 +147,86 @@ document.addEventListener('DOMContentLoaded', function () {
     experienceText.textContent = exp.text;
   }
 
+  // --- Prototype-only toast for disabled filters ---
+  function getOrCreatePrototypeToast() {
+    let toast = document.querySelector('.prototype-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'prototype-toast';
+      toast.setAttribute('role', 'status');
+      document.body.appendChild(toast);
+    }
+    return toast;
+  }
+
+  let toastTimeoutId = null;
+
+  function showPrototypeToast(message) {
+    const toast = getOrCreatePrototypeToast();
+    toast.textContent = message;
+    toast.classList.add('visible');
+
+    if (toastTimeoutId) {
+      clearTimeout(toastTimeoutId);
+    }
+    toastTimeoutId = setTimeout(() => {
+      toast.classList.remove('visible');
+    }, 2600);
+  }
+
+  const prototypeFilterTargets = document.querySelectorAll(
+    '.booking-filters .filter-chip, .booking-filters .filter-placeholder, .booking-filters .more-filters-link'
+  );
+
+  prototypeFilterTargets.forEach((el) => {
+    el.addEventListener('click', (event) => {
+      event.preventDefault();
+      showPrototypeToast('Filters are display-only in this prototype.');
+    });
+  });
+
+  // --- Simple selection count + sticky checkout bar ---
+  const bookingCards = document.querySelectorAll('.booking-card');
+  const selectionBar = document.querySelector('.booking-selection-bar');
+  const selectionCountEl = selectionBar
+    ? selectionBar.querySelector('.selection-count')
+    : null;
+
+  let selectedCount = 0;
+
+  function updateSelectionBar() {
+    if (!selectionBar || !selectionCountEl) return;
+
+    if (selectedCount <= 0) {
+      selectionBar.classList.add('hidden');
+      selectionCountEl.textContent = '0 items selected for your trip';
+      return;
+    }
+
+    const label = selectedCount === 1 ? 'item' : 'items';
+    selectionCountEl.textContent = `${selectedCount} ${label} selected for your trip`;
+    selectionBar.classList.remove('hidden');
+  }
+
+  bookingCards.forEach((card) => {
+    const selectBtn = card.querySelector('.select-btn');
+    if (!selectBtn) return;
+
+    selectBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const isSelected = card.classList.toggle('selected');
+      if (isSelected) {
+        selectedCount += 1;
+      } else {
+        selectedCount -= 1;
+        if (selectedCount < 0) selectedCount = 0;
+      }
+
+      updateSelectionBar();
+    });
+  });
+
   if (experienceDots.length && experiences.length) {
     experienceDots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
@@ -168,5 +248,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize first state
     setExperience(0);
+  }
+
+  // --- Checkout page: wire up complete booking and itinerary link ---
+  const completeBookingBtn = document.querySelector('.complete-booking-btn');
+  if (completeBookingBtn) {
+    completeBookingBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.location.href = 'thankyou.html';
+    });
+  }
+
+  const itineraryLinks = document.querySelectorAll(
+    '.checkout-link[href="#"], .action-link[href="#"]'
+  );
+
+  if (itineraryLinks.length) {
+    itineraryLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        showPrototypeToast('Itinerary view is not included in this prototype.');
+      });
+    });
   }
 });

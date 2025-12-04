@@ -54,155 +54,397 @@
     </div>
   </section>
 
-  <!-- Planning Guide -->
-  <section class="planning-guide">
-    <h2>Planning Guide</h2>
+  <!-- Lodging booking section -->
+  <section class="booking-section booking-lodging" id="booking-lodging">
+    <h2>Choose Your Lodging</h2>
+    <p class="section-intro">Compare overwater bungalows, lagoonfront resorts, and family stays for your dates.</p>
 
-    <div class="steps">
-      <div class="step">
-        <h3>Step 1: Choose Your Stay</h3>
-        <p>Browse hotels, resorts, and guesthouses that match your travel dates.</p>
+    <div class="booking-layout">
+      <aside class="booking-filters" aria-label="Lodging filters">
+        <h3>Filter your stay</h3>
+
+        <div class="filter-group">
+          <h4>Price per night</h4>
+          <div class="filter-placeholder"></div>
+          <div class="filter-placeholder"></div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Property type</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Resort</span>
+            <span class="filter-chip">Hotel</span>
+            <span class="filter-chip">Guesthouse</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Amenities</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Pool</span>
+            <span class="filter-chip">Breakfast included</span>
+            <span class="filter-chip">Overwater</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Guest rating</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Wonderful 9+</span>
+            <span class="filter-chip">Very good 8+</span>
+          </div>
+        </div>
+
+        <a href="#" class="more-filters-link">More lodging filters</a>
+      </aside>
+
+      <div class="booking-products">
+        <div class="booking-products-header">
+          <h3>Top picks for your stay</h3>
+          <span>Showing sample results for the prototype.</span>
+        </div>
+
+        <div class="booking-grid">
+          <article class="booking-card">
+            <div class="card-thumb card-image-lodging-sunset"></div>
+            <div>
+              <h4>Sunset Bay Resort</h4>
+              <p>Overwater bungalows along a quiet boardwalk with sunset views.</p>
+              <div class="price">From $3XX / night</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-lodging-rainforest"></div>
+            <div>
+              <h4>Rainforest Retreat Lodge</h4>
+              <p>Stilted villas in lush forest overlooking calm turquoise water.</p>
+              <div class="price">From $2XX / night</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-lodging-coral"></div>
+            <div>
+              <h4>Coral Sands Hotel</h4>
+              <p>Beachfront hotel on a wide stretch of soft white sand.</p>
+              <div class="price">From $1XX / night</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-explore-lagoon"></div>
+            <div>
+              <h4>Lagoon Bungalow Escape</h4>
+              <p>Spacious bungalows perched over glassy lagoon water.</p>
+              <div class="price">From $4XX / night</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-explore-garden"></div>
+            <div>
+              <h4>Garden View Villas</h4>
+              <p>Tropical garden paths, shared pools, and family suites.</p>
+              <div class="price">From $1XX / night</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-explore-beach"></div>
+            <div>
+              <h4>Family Beach Hotel</h4>
+              <p>Casual rooms steps from the beach, breakfast included.</p>
+              <div class="price">From $1XX / night</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+        </div>
+
+        <button class="section-expand" type="button">
+          <span class="arrow">▼</span>
+          Show more places to stay
+        </button>
       </div>
 
-      <div class="step">
-        <h3>Step 2: Explore Activities</h3>
-        <p>Add tours, experiences, and adventures to your itinerary.</p>
-      </div>
-
-      <div class="step">
-        <h3>Step 3: Finalize Your Booking</h3>
-        <p>Review your selections and confirm your trip details.</p>
-      </div>
     </div>
   </section>
 
-  <!-- Lodging Selection -->
-  <section class="choose-lodging">
-    <h2>Where Are You Staying?</h2>
+  <div class="booking-divider" aria-hidden="true"></div>
 
-    <div class="lodging-selection">
-      <div class="lodging-selectors">
-        <label>Check-in date</label>
-        <div class="input-placeholder"></div>
+  <!-- Attractions booking section -->
+  <section class="booking-section booking-attractions" id="booking-attractions">
+    <h2>Add Attractions & Tours</h2>
+    <p class="section-intro">Build out your itinerary with guided tours, water activities, and cultural experiences.</p>
 
-        <label>Check-out date</label>
-        <div class="input-placeholder"></div>
+    <div class="booking-layout">
+      <aside class="booking-filters" aria-label="Attraction filters">
+        <h3>Filter activities</h3>
 
-        <label>Number of guests</label>
-        <div class="input-placeholder"></div>
+        <div class="filter-group">
+          <h4>Activity type</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Water</span>
+            <span class="filter-chip">Nature</span>
+            <span class="filter-chip">Culture</span>
+          </div>
+        </div>
 
-        <button class="check-availability-btn">Check Availability</button>
+        <div class="filter-group">
+          <h4>Duration</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Up to 3 hours</span>
+            <span class="filter-chip">Half day</span>
+            <span class="filter-chip">Full day</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Traveler rating</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Wonderful 9+</span>
+            <span class="filter-chip">Very good 8+</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Time of day</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Morning</span>
+            <span class="filter-chip">Afternoon</span>
+            <span class="filter-chip">Evening</span>
+          </div>
+        </div>
+
+        <a href="#" class="more-filters-link">More activity filters</a>
+      </aside>
+
+      <div class="booking-products">
+        <div class="booking-products-header">
+          <h3>Popular experiences</h3>
+          <span>Sample results for prototype display.</span>
+        </div>
+
+        <div class="booking-grid">
+          <article class="booking-card">
+            <div class="card-thumb card-image-attraction-snorkeling"></div>
+            <div>
+              <h4>Snorkeling & Reef Cruise</h4>
+              <p>Half-day boat tour with reef snorkeling and island views.</p>
+              <div class="price">From $1XX per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-attraction-rainforest"></div>
+            <div>
+              <h4>Rainforest Waterfall Hike</h4>
+              <p>Guided hike through lush forest to a hidden waterfall pool.</p>
+              <div class="price">From $8X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-attraction-volcano"></div>
+            <div>
+              <h4>Sunset Volcano Overlook</h4>
+              <p>Evening trip to the crater overlook with stargazing.</p>
+              <div class="price">From $9X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-attraction-markets"></div>
+            <div>
+              <h4>Night Market Food Tour</h4>
+              <p>Small-group tasting tour of Taniti&apos;s night market.</p>
+              <div class="price">From $7X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-explore-boat"></div>
+            <div>
+              <h4>Lagoon Boat Tour</h4>
+              <p>Morning cruise with swimming stops and reef views.</p>
+              <div class="price">From $1XX per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-explore-bikes"></div>
+            <div>
+              <h4>Island Bike Rentals</h4>
+              <p>Daily rentals to explore beaches and town paths.</p>
+              <div class="price">From $2X per day</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+        </div>
+
+        <button class="section-expand" type="button">
+          <span class="arrow">▼</span>
+          Show more things to do
+        </button>
       </div>
 
-      <div class="lodging-list">
-
-        <div class="lodging-card">
-          <div class="image-placeholder"></div>
-          <h3>Sunset Bay Resort</h3>
-          <p>$XXX – Placeholder description text.</p>
-          <button class="select-btn">Select</button>
-        </div>
-
-        <div class="lodging-card">
-          <div class="image-placeholder"></div>
-          <h3>Rainforest Retreat Lodge</h3>
-          <p>$XXX – Placeholder description text.</p>
-          <button class="select-btn">Select</button>
-        </div>
-
-        <div class="lodging-card">
-          <div class="image-placeholder"></div>
-          <h3>Coral Sands Hotel</h3>
-          <p>$XXX – Placeholder description text.</p>
-          <button class="select-btn">Select</button>
-        </div>
-
-        <div class="lodging-card">
-          <div class="image-placeholder"></div>
-          <h3>Seaview Guesthouse</h3>
-          <p>$XXX – Placeholder description text.</p>
-          <button class="select-btn">Select</button>
-        </div>
-
-      </div>
     </div>
   </section>
 
-  <!-- Add-On Attractions -->
-  <section class="add-on-attractions">
-    <h2>Add-On Attractions</h2>
+  <!-- Divider between Lodging and Attractions -->
+  <div class="booking-divider" aria-hidden="true"></div>
 
-    <div class="attraction-list">
-
-      <div class="attraction-card">
-        <div class="image-placeholder"></div>
-        <h3>Snorkeling Adventure</h3>
-        <p>$XXX – Placeholder description.</p>
-        <button class="select-btn">Select</button>
-      </div>
-
-      <div class="attraction-card">
-        <div class="image-placeholder"></div>
-        <h3>Rainforest Hike</h3>
-        <p>$XXX – Placeholder description.</p>
-        <button class="select-btn">Select</button>
-      </div>
-
-      <div class="attraction-card">
-        <div class="image-placeholder"></div>
-        <h3>Local Cuisine Experience</h3>
-        <p>$XXX – Placeholder description.</p>
-        <button class="select-btn">Select</button>
-      </div>
-
-    </div>
-
-    <a href="attractions.html" class="more-link">View More Attractions</a>
-  </section>
-
-  <!-- Dining Reservations -->
-  <section class="dining-reservations">
+  <!-- Dining booking section -->
+  <section class="booking-section booking-dining" id="booking-dining">
     <h2>Reserve Dining</h2>
+    <p class="section-intro">Add dinner reservations and special tasting nights to complete your trip.</p>
 
-    <div class="dining-list">
+    <div class="booking-layout">
+      <aside class="booking-filters" aria-label="Dining filters">
+        <h3>Filter dining</h3>
 
-      <div class="dining-card">
-        <div class="image-placeholder"></div>
-        <h3>Harbor Grill</h3>
-        <p>$XXX – Placeholder description.</p>
-        <button class="select-btn">Select</button>
-      </div>
+        <div class="filter-group">
+          <h4>Type of restaurant</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Seafood</span>
+            <span class="filter-chip">Fine dining</span>
+            <span class="filter-chip">Local cafés</span>
+          </div>
+        </div>
 
-      <div class="dining-card">
-        <div class="image-placeholder"></div>
-        <h3>Rainforest Cafe</h3>
-        <p>$XXX – Placeholder description.</p>
-        <button class="select-btn">Select</button>
-      </div>
+        <div class="filter-group">
+          <h4>Price range</h4>
+          <div class="filter-placeholder"></div>
+          <div class="filter-placeholder"></div>
+        </div>
 
-      <div class="dining-card">
-        <div class="image-placeholder"></div>
-        <h3>Coral View Restaurant</h3>
-        <p>$XXX – Placeholder description.</p>
-        <button class="select-btn">Select</button>
+        <div class="filter-group">
+          <h4>Dietary options</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Vegetarian</span>
+            <span class="filter-chip">Gluten-free</span>
+            <span class="filter-chip">Family-friendly</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Time</h4>
+          <div class="filter-chips">
+            <span class="filter-chip">Breakfast</span>
+            <span class="filter-chip">Lunch</span>
+            <span class="filter-chip">Dinner</span>
+          </div>
+        </div>
+
+        <a href="#" class="more-filters-link">More dining filters</a>
+      </aside>
+
+      <div class="booking-products">
+        <div class="booking-products-header">
+          <h3>Featured restaurants</h3>
+          <span>Sample reservation options for the prototype.</span>
+        </div>
+
+        <div class="booking-grid">
+          <article class="booking-card">
+            <div class="card-thumb card-image-food-harbor"></div>
+            <div>
+              <h4>Harbor Front Grill</h4>
+              <p>Waterfront seafood with sunset harbor views.</p>
+              <div class="price">From $4X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-food-rainforest"></div>
+            <div>
+              <h4>Rainforest Lookout Café</h4>
+              <p>Open-air terrace beside the jungle canopy.</p>
+              <div class="price">From $3X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-food-coral"></div>
+            <div>
+              <h4>Coral View Restaurant</h4>
+              <p>Lagoonside dining with a seasonal tasting menu.</p>
+              <div class="price">From $6X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-featured-dining"></div>
+            <div>
+              <h4>Lagoon Tasting Night</h4>
+              <p>Multi-course tasting featuring island-grown ingredients.</p>
+              <div class="price">From $8X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-explore-seafood"></div>
+            <div>
+              <h4>Seafood Shack</h4>
+              <p>Casual grilled fish, island sides, and cold drinks.</p>
+              <div class="price">From $3X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+
+          <article class="booking-card">
+            <div class="card-thumb card-image-explore-cafes"></div>
+            <div>
+              <h4>Market Street Café</h4>
+              <p>Breakfast bowls, strong coffee, and light lunches.</p>
+              <div class="price">From $2X per person</div>
+              <button class="select-btn">Select</button>
+            </div>
+          </article>
+        </div>
+
+        <button class="section-expand" type="button">
+          <span class="arrow">▼</span>
+          Show more dining options
+        </button>
       </div>
 
     </div>
-
-    <a href="food.html" class="more-link">See More Dining Options</a>
   </section>
 
-  <!-- More to Explore -->
+  <!-- Divider between Attractions and Dining -->
+  <div class="booking-divider" aria-hidden="true"></div>
+
+  <!-- Section Jump Links (stay on booking page) -->
   <section class="more-to-explore">
-    <h2>More to Explore</h2>
+    <h2>Jump to a Section</h2>
 
     <div class="explore-links">
-      <a href="lodging.html" class="explore-item">See Lodging</a>
-      <a href="attractions.html" class="explore-item">Explore Attractions</a>
-      <a href="food.html" class="explore-item">Dining</a>
-      <a href="booking.html" class="explore-item">Book Now</a>
+      <a href="#booking-lodging" class="explore-item">Lodging</a>
+      <a href="#booking-attractions" class="explore-item">Attractions &amp; Tours</a>
+      <a href="#booking-dining" class="explore-item">Dining Reservations</a>
     </div>
   </section>
+
+  <!-- Sticky selection bar for checkout prototype -->
+  <div class="booking-selection-bar hidden" aria-live="polite">
+    <span class="selection-count">0 items selected for your trip</span>
+    <a href="checkout.html" class="selection-cta">Review &amp; Checkout</a>
+  </div>
 </main>
 
 <footer class="site-footer">
