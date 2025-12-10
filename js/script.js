@@ -333,6 +333,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const travelImage = travelCard ? travelCard.querySelector('.featured-travel-image') : null;
   const travelTitle = travelCard ? travelCard.querySelector('h3') : null;
   const travelText = travelCard ? travelCard.querySelector('p') : null;
+  const travelLink = travelCard ? travelCard.querySelector('.card-link') : null;
   const travelDots = document.querySelectorAll('.featured-travel-tip .scroll-indicators .dot');
 
   const travelTips = travelCard
@@ -341,16 +342,19 @@ document.addEventListener('DOMContentLoaded', function () {
         title: 'Your First Evening on Taniti',
         text: 'Plan a relaxed first night near the harbor so you can adjust to the time zone before exploring the rest of the island.',
         imageClass: 'card-image-featured-travel',
+        link: 'info.html#sightseeing',
       },
       {
         title: 'Getting Around Without a Car',
         text: 'Use island shuttles, taxis, and bike rentals to move between the harbor, beaches, and rainforest trails.',
         imageClass: 'card-image-featured-no-car',
+        link: 'info.html#ground-transportation',
       },
       {
         title: 'Essentials to Pack',
         text: 'Bring reef-safe sunscreen, light rain gear, and a power adapter so you\'re ready for shifting weather and day trips.',
         imageClass: 'card-image-essentials-to-pack',
+        link: 'info.html#faqs',
       },
     ]
     : [];
@@ -379,6 +383,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     travelTitle.textContent = tip.title;
     travelText.textContent = tip.text;
+    if (travelLink && tip.link) {
+      travelLink.href = tip.link;
+    }
   }
 
   if (travelDots.length && travelTips.length) {

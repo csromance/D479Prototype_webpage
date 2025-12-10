@@ -2058,6 +2058,117 @@ section {
 }
 
 /* ==========================================================================
+   Info Page Styling
+   ========================================================================== */
+
+/* Hero background for info page */
+.hero-info {
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+              url('../img/landscapes/hero-about.jpg') center/cover;
+}
+
+.hero-info .hero-content h1,
+.hero-info .hero-content p {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Info section wrapper */
+.info-section {
+  margin-top: 3rem;
+}
+
+.info-section + .info-section {
+  margin-top: 3rem;
+}
+
+/* Info card containers */
+.info-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+@media (min-width: 800px) {
+  .info-card {
+    padding: 2.5rem 3rem;
+  }
+}
+
+/* Activity grid system for Entertainment section */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .activity-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .activity-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.activity-card {
+  background: #f8fafc;
+  border: 1px solid #e4f0fb;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.activity-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-card h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #003b6d;
+}
+
+/* FAQ section enhancement */
+.info-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e4f0fb;
+  font-size: 1.1rem;
+  color: #003b6d;
+}
+
+.info-content h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.info-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.info-content ul {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.info-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
