@@ -13,8 +13,7 @@
   <nav class="main-nav">
     <a href="index.html" class="site-logo" aria-label="Taniti Travel">
       <svg width="34" height="34" viewBox="0 0 64 64"
-           xmlns="http://www.w3.org/2000/svg"
-           style="vertical-align: middle; margin-right: 0.4rem;">
+           xmlns="http://www.w3.org/2000/svg">
         <!-- Mountain -->
         <path d="M4 48 L24 20 L36 34 L48 18 L60 48 Z"
               fill="#ffbe66" stroke="#ffffff" stroke-width="2" />
@@ -30,8 +29,8 @@
         <path d="M34 32 C32 26 28 22 24 20" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
       </svg>
 
-      <span style="font-weight:700; color:#ffffff;">Taniti</span>
-      <span style="color:#ffbe66; font-weight:700;">Travel</span>
+      <span class="site-logo-text">Taniti</span>
+      <span class="site-logo-accent">Travel</span>
     </a>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -79,9 +78,9 @@
     <button class="complete-booking-btn">Complete Booking</button>
 
     <div class="checkout-links">
-      <button class="checkout-link-btn" onclick="window.location.href='#'">View Itinerary</button>
-      <button class="checkout-link-btn" onclick="window.location.href='attractions.html'">Explore More Attractions</button>
-      <button class="checkout-link-btn" onclick="window.location.href='index.html'">Return Home</button>
+      <a href="#" class="checkout-link-btn checkout-link">View Itinerary</a>
+      <a href="attractions.html" class="checkout-link-btn">Explore More Attractions</a>
+      <a href="index.html" class="checkout-link-btn">Return Home</a>
     </div>
   </section>
 </main>

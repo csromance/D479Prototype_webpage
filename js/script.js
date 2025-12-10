@@ -49,6 +49,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// Declare interval IDs at top level for cleanup
+let experienceIntervalId = null;
+let accommodationIntervalId = null;
+let diningIntervalId = null;
+let travelIntervalId = null;
+let toastTimeoutId = null;
+
 // Everything else
 document.addEventListener('DOMContentLoaded', function () {
   // --- Attractions category filters ---
@@ -107,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
     : [];
 
   let currentExperienceIndex = 0;
-  let experienceIntervalId = null;
 
   function setExperience(index) {
     if (
@@ -191,7 +197,6 @@ document.addEventListener('DOMContentLoaded', function () {
     : [];
 
   let currentAccommodationIndex = 0;
-  let accommodationIntervalId = null;
 
   function setAccommodation(index) {
     if (
@@ -265,14 +270,13 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       {
         title: 'Night Market Street Feast',
-        text: 'Follow a local guide through Taniti’s night market for grilled skewers, noodles, and sweet treats from open-air stalls.',
+        text: 'Follow a local guide through Taniti\'s night market for grilled skewers, noodles, and sweet treats from open-air stalls.',
         imageClass: 'card-image-explore-night-market',
       },
     ]
     : [];
 
   let currentDiningIndex = 0;
-  let diningIntervalId = null;
 
   function setDining(index) {
     if (
@@ -345,14 +349,13 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       {
         title: 'Essentials to Pack',
-        text: 'Bring reef-safe sunscreen, light rain gear, and a power adapter so you’re ready for shifting weather and day trips.',
+        text: 'Bring reef-safe sunscreen, light rain gear, and a power adapter so you\'re ready for shifting weather and day trips.',
         imageClass: 'card-image-essentials-to-pack',
       },
     ]
     : [];
 
   let currentTravelIndex = 0;
-  let travelIntervalId = null;
 
   function setTravelTip(index) {
     if (!travelCard || !travelImage || !travelTitle || !travelText || !travelTips.length) {
@@ -409,8 +412,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     return toast;
   }
-
-  let toastTimeoutId = null;
 
   function showPrototypeToast(message) {
     const toast = getOrCreatePrototypeToast();
@@ -496,4 +497,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+});
+
+// Clean up intervals and timeouts when page unloads to prevent memory leaks
+window.addEventListener('beforeunload', () => {
+  if (experienceIntervalId) clearInterval(experienceIntervalId);
+  if (accommodationIntervalId) clearInterval(accommodationIntervalId);
+  if (diningIntervalId) clearInterval(diningIntervalId);
+  if (travelIntervalId) clearInterval(travelIntervalId);
+  if (toastTimeoutId) clearTimeout(toastTimeoutId);
 });
