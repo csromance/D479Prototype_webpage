@@ -789,6 +789,10 @@ section {
   background-image: url("../img/landscapes/card-attraction-rainforest-hike.png");
 }
 
+.card-image-attraction-rainforest {
+  background-image: url("../img/landscapes/rainforest-waterfall.jpg");
+}
+
 .card-image-attraction-volcano {
   background-image: url("../img/adventure/card-attraction-volcano.jpg");
 }
