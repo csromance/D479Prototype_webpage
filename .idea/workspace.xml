@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f46566a6-b8eb-4180-af04-8b2d3163cc73" name="Changes" comment="Refactored inline styles into reusable CSS classes, introduced CSS variables for colors, spacing, and transitions, and updated all pages for consistent styling. Improved accessibility and readability by replacing `button` elements with semantic `a` tags where appropriate. Enhanced JavaScript to clean up intervals and prevent memory leaks.">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/D479Prototype_webpage.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/img_citations.rtf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vendor/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.prod.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;csromance&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/csromance/D479Prototype_webpage.git&quot;,
+    &quot;accountId&quot;: &quot;6bee2453-5aa5-4a82-b8f3-944a6ae2156c&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="AISelfReview" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="35npwbLm4yaJRk7BLBmWes57EUP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;cleaned-codebase&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/csromance/IdeaProjects/D479_Prototype/D479Prototype_webpage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.14798489&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/landscapes" />
+      <recent name="$PROJECT_DIR$/img/resorts" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f46566a6-b8eb-4180-af04-8b2d3163cc73" name="Changes" comment="" />
+      <created>1763755929676</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763755929676</updated>
+      <workItem from="1763755930680" duration="1388000" />
+      <workItem from="1763757331940" duration="12253000" />
+      <workItem from="1763852173953" duration="6489000" />
+      <workItem from="1764356348456" duration="928000" />
+      <workItem from="1764357284507" duration="187000" />
+      <workItem from="1764357614372" duration="718000" />
+      <workItem from="1764372343907" duration="2199000" />
+      <workItem from="1764540535077" duration="7630000" />
+      <workItem from="1764624843426" duration="9107000" />
+      <workItem from="1764709522389" duration="9539000" />
+      <workItem from="1764783285788" duration="11097000" />
+      <workItem from="1765218256914" duration="11844000" />
+      <workItem from="1765323265940" duration="17005000" />
+      <workItem from="1765345685940" duration="31000" />
+    </task>
+    <task id="LOCAL-00001" summary="Created all prototype web pages and added initial HTML. Added basic css to style.css sheet">
+      <option name="closed" value="true" />
+      <created>1763772685421</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763772685421</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added images to img file. wrote css and html to add hero images.">
+      <option name="closed" value="true" />
+      <created>1763775870719</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763775870719</updated>
+    </task>
+    <task id="LOCAL-00003" summary="re-selected more appropriate hero images">
+      <option name="closed" value="true" />
+      <created>1763862147005</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763862147005</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adjusted css for better alignment of page elements. added svg logo to html pages. changed some hero images around">
+      <option name="closed" value="true" />
+      <created>1764549149459</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764549149459</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added new feature section with cards on the homepage, implemented review carousel functionality, refined CSS for various UI improvements, and updated images and file structure.">
+      <option name="closed" value="true" />
+      <created>1764640176753</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764640176753</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implemented attraction filters and featured experience slider functionality with associated updates to JavaScript and CSS. Enhanced lodging, dining, and attractions sections with refined descriptions, updated images, new grid layouts, and additional styling changes. Deleted unused images and added new assets.">
+      <option name="closed" value="true" />
+      <created>1764728137455</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764728137455</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refined UI and content across various pages: updated descriptions, added interactive buttons, restructured layouts, integrated new images, enhanced booking and selection functionality with JavaScript, and introduced prototype-only elements for better visualization. reached working prototype stage">
+      <option name="closed" value="true" />
+      <created>1764809926167</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764809926167</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added citations for all feature and card images, introduced updated image class naming conventions, improved travel info cards with new class references, extended JavaScript for attractions, lodging, dining, and travel sliders, and optimized carousel behavior with updated intervals and event handling.">
+      <option name="closed" value="true" />
+      <created>1765330957531</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765330957531</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Redesigned &quot;More to Explore&quot; section with new grid layout, updated card structures, new background images, and added rainforest waterfall asset. Webpage has reached finished state 2.">
+      <option name="closed" value="true" />
+      <created>1765332870062</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765332870062</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added a dedicated &quot;Image Citations&quot; page with detailed photo credits and attributions. Updated footer links across all pages to include a link to the citations page. Deleted unused image assets for optimization.">
+      <option name="closed" value="true" />
+      <created>1765335339052</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765335339052</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactored inline styles into reusable CSS classes, introduced CSS variables for colors, spacing, and transitions, and updated all pages for consistent styling. Improved accessibility and readability by replacing `button` elements with semantic `a` tags where appropriate. Enhanced JavaScript to clean up intervals and prevent memory leaks.">
+      <option name="closed" value="true" />
+      <created>1765345014701</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765345014701</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created all prototype web pages and added initial HTML. Added basic css to style.css sheet" />
+    <MESSAGE value="added images to img file. wrote css and html to add hero images." />
+    <MESSAGE value="re-selected more appropriate hero images" />
+    <MESSAGE value="adjusted css for better alignment of page elements. added svg logo to html pages. changed some hero images around" />
+    <MESSAGE value="added new feature section with cards on the homepage, implemented review carousel functionality, refined CSS for various UI improvements, and updated images and file structure." />
+    <MESSAGE value="Implemented attraction filters and featured experience slider functionality with associated updates to JavaScript and CSS. Enhanced lodging, dining, and attractions sections with refined descriptions, updated images, new grid layouts, and additional styling changes. Deleted unused images and added new assets." />
+    <MESSAGE value="Refined UI and content across various pages: updated descriptions, added interactive buttons, restructured layouts, integrated new images, enhanced booking and selection functionality with JavaScript, and introduced prototype-only elements for better visualization. reached working prototype stage" />
+    <MESSAGE value="Added citations for all feature and card images, introduced updated image class naming conventions, improved travel info cards with new class references, extended JavaScript for attractions, lodging, dining, and travel sliders, and optimized carousel behavior with updated intervals and event handling." />
+    <MESSAGE value="Redesigned &quot;More to Explore&quot; section with new grid layout, updated card structures, new background images, and added rainforest waterfall asset. Webpage has reached finished state 2." />
+    <MESSAGE value="Added a dedicated &quot;Image Citations&quot; page with detailed photo credits and attributions. Updated footer links across all pages to include a link to the citations page. Deleted unused image assets for optimization." />
+    <MESSAGE value="Refactored inline styles into reusable CSS classes, introduced CSS variables for colors, spacing, and transitions, and updated all pages for consistent styling. Improved accessibility and readability by replacing `button` elements with semantic `a` tags where appropriate. Enhanced JavaScript to clean up intervals and prevent memory leaks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored inline styles into reusable CSS classes, introduced CSS variables for colors, spacing, and transitions, and updated all pages for consistent styling. Improved accessibility and readability by replacing `button` elements with semantic `a` tags where appropriate. Enhanced JavaScript to clean up intervals and prevent memory leaks." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
