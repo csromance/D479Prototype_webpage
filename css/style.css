@@ -750,6 +750,7 @@ section {
 }
 
 /* Specific thumbnails for home info cards */
+/* Home page info card thumbnails */
 .card-image-getting-here {
   background-image: url("../img/travel/hero-travel.jpg");
 }
@@ -762,6 +763,19 @@ section {
   background-image: url("../img/landscapes/card-visitor-essentials.jpg");
 }
 
+/* Travel Info page info card thumbnails */
+.card-image-travel-getting-here {
+  background-image: url("../img/travel/card-travel-getting-here.png");
+}
+
+.card-image-travel-getting-around {
+  background-image: url("../img/travel/card-travel-getting-around.png");
+}
+
+.card-image-travel-essentials {
+  background-image: url("../img/travel/card-travel-essentials.png");
+}
+
 /* Specific thumbnails for attractions cards */
 .card-image-attraction-beaches {
   background-image: url("../img/landscapes/card-attraction-beaches.jpg");
@@ -771,8 +785,8 @@ section {
   background-image: url("../img/adventure/card-attraction-snorkeling.jpg");
 }
 
-.card-image-attraction-rainforest {
-  background-image: url("../img/landscapes/card-attraction-rainforest.jpg");
+.card-image-attraction-rainforest-hike {
+  background-image: url("../img/landscapes/card-attraction-rainforest-hike.png");
 }
 
 .card-image-attraction-volcano {
@@ -780,16 +794,24 @@ section {
 }
 
 .card-image-attraction-markets {
-  background-image: url("../img/culture/card-attraction-markets.jpg");
+  background-image: url("../img/culture/card-attraction-markets.png");
 }
 
 .card-image-attraction-culture {
-  background-image: url("../img/culture/card-attraction-centers.jpg");
+  background-image: url("../img/culture/card-attraction-cultural-center.png");
 }
 
 /* Featured experience strip image */
 .card-image-featured-experience {
   background-image: url("../img/adventure/card-featured-experience.jpg");
+}
+
+.card-image-attraction-night-market {
+  background-image: url("../img/food/card-attraction-night-market.png");
+}
+
+.card-image-attraction-volcano-hike {
+  background-image: url("../img/landscapes/card-attraction-volcano-hike.png");
 }
 
 /* Thumbnails for Attractions "More to Explore" grid */
@@ -824,12 +846,12 @@ section {
 
 /* Featured lodging strip image */
 .card-image-featured-stay {
-  background-image: url("../img/resorts/hero-booking.jpg");
+  background-image: url("../img/resorts/lagoon-bungalow.png");
 }
 
 /* Thumbnails for Lodging "More to Explore" grid */
 .card-image-explore-overwater {
-  background-image: url("../img/resorts/feature-lodging.jpg");
+  background-image: url("../img/resorts/overwater-bungalow.png");
 }
 
 .card-image-explore-lagoon {
@@ -837,16 +859,16 @@ section {
 }
 
 .card-image-explore-garden {
-  background-image: url("../img/resorts/card-lodging-rainforest.jpg");
+  background-image: url("../img/resorts/card-lodging-rainforest.png");
 }
 
 .card-image-explore-beach {
-  background-image: url("../img/resorts/card-lodging-coral.jpg");
+  background-image: url("../img/resorts/card-lodging-beachfront.png");
 }
 
 /* Thumbnails for Food cards */
 .card-image-food-harbor {
-  background-image: url("../img/food/card-harbor-front-grill.jpg");
+  background-image: url("../img/food/harbor-front-grill.png");
 }
 
 .card-image-food-rainforest {
@@ -859,12 +881,20 @@ section {
 
 /* Featured dining strip image */
 .card-image-featured-dining {
-  background-image: url("../img/food/card-featured-dining.jpg");
+  background-image: url("../img/food/card-featured-dining.png");
 }
 
 /* Featured travel tip strip image */
 .card-image-featured-travel {
-  background-image: url("../img/travel/hero-travel.jpg");
+  background-image: url("../img/travel/card-featured-travel.png");
+}
+
+.card-image-featured-no-car {
+  background-image: url("../img/travel/feature-no-car.png");
+}
+
+.card-image-essentials-to-pack {
+  background-image: url("../img/travel/card-essentials-to-pack.png");
 }
 
 /* Thumbnails for Travel Info "More to Explore" grid */
@@ -894,11 +924,11 @@ section {
 }
 
 .card-image-explore-cafes {
-  background-image: url("../img/food/card-rainforest-lookout.jpg");
+  background-image: url("../img/food/cafes-and-coffee.png");
 }
 
 .card-image-explore-fine-dining {
-  background-image: url("../img/food/card-coral-view.jpg");
+  background-image: url("../img/food/fine-dining.png");
 }
 
 /* Attractions – More to Explore image grid */

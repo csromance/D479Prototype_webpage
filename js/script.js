@@ -1,3 +1,4 @@
+// Reviews pagination
 document.addEventListener('DOMContentLoaded', function () {
   const reviewList = document.querySelector('.review-list');
   if (!reviewList) return;
@@ -5,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const cards = Array.from(reviewList.querySelectorAll('.review-card'));
   const prevBtn = document.querySelector('.review-nav.prev');
   const nextBtn = document.querySelector('.review-nav.next');
-  const pageSize = 3; // show 3 reviews at a time
+  const pageSize = 3;
   let page = 0;
 
   function renderPage() {
@@ -25,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // If there aren't enough reviews to paginate, just show them and hide controls
   if (cards.length <= pageSize) {
     const controls = document.querySelector('.review-controls');
     if (controls) controls.style.display = 'none';
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// Everything else
 document.addEventListener('DOMContentLoaded', function () {
   // --- Attractions category filters ---
   const filterButtons = document.querySelectorAll('.attraction-filters .filter-btn');
@@ -59,11 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter || 'all';
 
-        // Update active state on buttons
         filterButtons.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
 
-        // Show/hide cards based on category
         attractionCards.forEach((card) => {
           if (filter === 'all') {
             card.classList.remove('hidden');
@@ -76,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // --- Featured Experience mini-slider ---
+  // --- Featured Experience (Attractions) ---
   const experienceCard = document.querySelector('.featured-experience .experience-card');
   const experienceImage = experienceCard
     ? experienceCard.querySelector('.featured-experience-image')
@@ -97,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function () {
       {
         title: 'Sunset Volcano Hike',
         text: 'Join a small-group hike to the crater overlook, ending with stargazing on the ridge.',
-        imageClass: 'card-image-attraction-volcano',
+        imageClass: 'card-image-attraction-volcano-hike',
       },
       {
         title: 'Night Market Food Tour',
         text: 'Sample grilled seafood, tropical fruit, and Taniti street food with a local host.',
-        imageClass: 'card-image-attraction-markets',
+        imageClass: 'card-image-attraction-night-market',
       },
     ]
     : [];
@@ -120,34 +119,286 @@ document.addEventListener('DOMContentLoaded', function () {
     ) {
       return;
     }
-    currentExperienceIndex = index;
 
+    currentExperienceIndex = index;
     const exp = experiences[index];
     if (!exp) return;
 
-    // Update active dot
     experienceDots.forEach((dot, i) => {
-      if (i === index) {
-        dot.classList.add('active');
-      } else {
-        dot.classList.remove('active');
-      }
+      dot.classList.toggle('active', i === index);
     });
 
-    // Swap image classes
     experienceImage.classList.remove(
       'card-image-featured-experience',
-      'card-image-attraction-volcano',
-      'card-image-attraction-markets'
+      'card-image-attraction-volcano-hike',
+      'card-image-attraction-night-market'
     );
     experienceImage.classList.add(exp.imageClass);
 
-    // Update text
     experienceTitle.textContent = exp.title;
     experienceText.textContent = exp.text;
   }
 
-  // --- Prototype-only toast for disabled filters ---
+  if (experienceDots.length && experiences.length) {
+    experienceDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        setExperience(index);
+        if (experienceIntervalId) clearInterval(experienceIntervalId);
+        experienceIntervalId = setInterval(() => {
+          const nextIndex = (currentExperienceIndex + 1) % experiences.length;
+          setExperience(nextIndex);
+        }, 5000);
+      });
+    });
+
+    experienceIntervalId = setInterval(() => {
+      const nextIndex = (currentExperienceIndex + 1) % experiences.length;
+      setExperience(nextIndex);
+    }, 5000);
+
+    setExperience(0);
+  }
+
+  // --- Featured Accommodation (Lodging) ---
+  const accommodationCard = document.querySelector('.featured-accommodation .experience-card');
+  const accommodationImage = accommodationCard
+    ? accommodationCard.querySelector('.featured-accommodation-image')
+    : null;
+  const accommodationTitle = accommodationCard ? accommodationCard.querySelector('h3') : null;
+  const accommodationText = accommodationCard ? accommodationCard.querySelector('p') : null;
+  const accommodationDots = document.querySelectorAll(
+    '.featured-accommodation .scroll-indicators .dot'
+  );
+
+  const accommodations = accommodationCard
+    ? [
+      {
+        title: 'Lagoon Bungalow Escape',
+        text: 'Stay in a spacious overwater bungalow with glassy turquoise water below, private deck loungers, and soft evening lighting along the pier.',
+        imageClass: 'card-image-featured-stay',
+      },
+      {
+        title: 'Overwater Bungalow Collection',
+        text: 'Line up a row of classic overwater bungalows with warm lighting, ideal for couples and special trips.',
+        imageClass: 'card-image-explore-overwater',
+      },
+      {
+        title: 'Beachfront Family Resort',
+        text: 'Choose a beachfront hotel with wide sand, easy pool access, and short walks to casual dining and activities.',
+        imageClass: 'card-image-explore-beach',
+      },
+    ]
+    : [];
+
+  let currentAccommodationIndex = 0;
+  let accommodationIntervalId = null;
+
+  function setAccommodation(index) {
+    if (
+      !accommodationCard ||
+      !accommodationImage ||
+      !accommodationTitle ||
+      !accommodationText ||
+      !accommodations.length
+    ) {
+      return;
+    }
+
+    currentAccommodationIndex = index;
+    const acc = accommodations[index];
+    if (!acc) return;
+
+    accommodationDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+
+    accommodationImage.classList.remove(
+      'card-image-featured-stay',
+      'card-image-explore-overwater',
+      'card-image-explore-garden',
+      'card-image-explore-beach'
+    );
+    accommodationImage.classList.add(acc.imageClass);
+
+    accommodationTitle.textContent = acc.title;
+    accommodationText.textContent = acc.text;
+  }
+
+  if (accommodationDots.length && accommodations.length) {
+    accommodationDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        setAccommodation(index);
+        if (accommodationIntervalId) clearInterval(accommodationIntervalId);
+        accommodationIntervalId = setInterval(() => {
+          const nextIndex = (currentAccommodationIndex + 1) % accommodations.length;
+          setAccommodation(nextIndex);
+        }, 5000);
+      });
+    });
+
+    accommodationIntervalId = setInterval(() => {
+      const nextIndex = (currentAccommodationIndex + 1) % accommodations.length;
+      setAccommodation(nextIndex);
+    }, 5000);
+
+    setAccommodation(0);
+  }
+
+  // --- Featured Dining (Food) ---
+  const diningCard = document.querySelector('.featured-dining .experience-card');
+  const diningImage = diningCard ? diningCard.querySelector('.featured-dining-image') : null;
+  const diningTitle = diningCard ? diningCard.querySelector('h3') : null;
+  const diningText = diningCard ? diningCard.querySelector('p') : null;
+  const diningDots = document.querySelectorAll('.featured-dining .scroll-indicators .dot');
+
+  const diningExperiences = diningCard
+    ? [
+      {
+        title: 'Lagoon Tasting Night',
+        text: 'Multi-course dinner spotlighting fresh seafood, island-grown produce, and dessert under the stars.',
+        imageClass: 'card-image-featured-dining',
+      },
+      {
+        title: 'Harborfront Sunset Dinner',
+        text: 'Relax at a harbor-side grill with fresh-caught fish, island cocktails, and harbor lights reflecting on the water.',
+        imageClass: 'card-image-food-harbor',
+      },
+      {
+        title: 'Night Market Street Feast',
+        text: 'Follow a local guide through Taniti’s night market for grilled skewers, noodles, and sweet treats from open-air stalls.',
+        imageClass: 'card-image-explore-night-market',
+      },
+    ]
+    : [];
+
+  let currentDiningIndex = 0;
+  let diningIntervalId = null;
+
+  function setDining(index) {
+    if (
+      !diningCard ||
+      !diningImage ||
+      !diningTitle ||
+      !diningText ||
+      !diningExperiences.length
+    ) {
+      return;
+    }
+
+    currentDiningIndex = index;
+    const exp = diningExperiences[index];
+    if (!exp) return;
+
+    diningDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+
+    diningImage.classList.remove(
+      'card-image-featured-dining',
+      'card-image-food-harbor',
+      'card-image-explore-night-market'
+    );
+    diningImage.classList.add(exp.imageClass);
+
+    diningTitle.textContent = exp.title;
+    diningText.textContent = exp.text;
+  }
+
+  if (diningDots.length && diningExperiences.length) {
+    diningDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        setDining(index);
+        if (diningIntervalId) clearInterval(diningIntervalId);
+        diningIntervalId = setInterval(() => {
+          const nextIndex = (currentDiningIndex + 1) % diningExperiences.length;
+          setDining(nextIndex);
+        }, 5000);
+      });
+    });
+
+    diningIntervalId = setInterval(() => {
+      const nextIndex = (currentDiningIndex + 1) % diningExperiences.length;
+      setDining(nextIndex);
+    }, 5000);
+
+    setDining(0);
+  }
+
+  // --- Featured Travel Tip (Travel Info) ---
+  const travelCard = document.querySelector('.featured-travel-tip .experience-card');
+  const travelImage = travelCard ? travelCard.querySelector('.featured-travel-image') : null;
+  const travelTitle = travelCard ? travelCard.querySelector('h3') : null;
+  const travelText = travelCard ? travelCard.querySelector('p') : null;
+  const travelDots = document.querySelectorAll('.featured-travel-tip .scroll-indicators .dot');
+
+  const travelTips = travelCard
+    ? [
+      {
+        title: 'Your First Evening on Taniti',
+        text: 'Plan a relaxed first night near the harbor so you can adjust to the time zone before exploring the rest of the island.',
+        imageClass: 'card-image-featured-travel',
+      },
+      {
+        title: 'Getting Around Without a Car',
+        text: 'Use island shuttles, taxis, and bike rentals to move between the harbor, beaches, and rainforest trails.',
+        imageClass: 'card-image-featured-no-car',
+      },
+      {
+        title: 'Essentials to Pack',
+        text: 'Bring reef-safe sunscreen, light rain gear, and a power adapter so you’re ready for shifting weather and day trips.',
+        imageClass: 'card-image-essentials-to-pack',
+      },
+    ]
+    : [];
+
+  let currentTravelIndex = 0;
+  let travelIntervalId = null;
+
+  function setTravelTip(index) {
+    if (!travelCard || !travelImage || !travelTitle || !travelText || !travelTips.length) {
+      return;
+    }
+
+    currentTravelIndex = index;
+    const tip = travelTips[index];
+    if (!tip) return;
+
+    travelDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+
+    travelImage.classList.remove(
+      'card-image-featured-travel',
+      'card-image-featured-no-car',
+      'card-image-essentials-to-pack'
+    );
+    travelImage.classList.add(tip.imageClass);
+
+    travelTitle.textContent = tip.title;
+    travelText.textContent = tip.text;
+  }
+
+  if (travelDots.length && travelTips.length) {
+    travelDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        setTravelTip(index);
+        if (travelIntervalId) clearInterval(travelIntervalId);
+        travelIntervalId = setInterval(() => {
+          const nextIndex = (currentTravelIndex + 1) % travelTips.length;
+          setTravelTip(nextIndex);
+        }, 5000);
+      });
+    });
+
+    travelIntervalId = setInterval(() => {
+      const nextIndex = (currentTravelIndex + 1) % travelTips.length;
+      setTravelTip(nextIndex);
+    }, 5000);
+
+    setTravelTip(0);
+  }
+
+  // --- Prototype toast for fake filters ---
   function getOrCreatePrototypeToast() {
     let toast = document.querySelector('.prototype-toast');
     if (!toast) {
@@ -166,9 +417,7 @@ document.addEventListener('DOMContentLoaded', function () {
     toast.textContent = message;
     toast.classList.add('visible');
 
-    if (toastTimeoutId) {
-      clearTimeout(toastTimeoutId);
-    }
+    if (toastTimeoutId) clearTimeout(toastTimeoutId);
     toastTimeoutId = setTimeout(() => {
       toast.classList.remove('visible');
     }, 2600);
@@ -185,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // --- Simple selection count + sticky checkout bar ---
+  // --- Selection bar on booking page ---
   const bookingCards = document.querySelectorAll('.booking-card');
   const selectionBar = document.querySelector('.booking-selection-bar');
   const selectionCountEl = selectionBar
@@ -219,38 +468,14 @@ document.addEventListener('DOMContentLoaded', function () {
       if (isSelected) {
         selectedCount += 1;
       } else {
-        selectedCount -= 1;
-        if (selectedCount < 0) selectedCount = 0;
+        selectedCount = Math.max(0, selectedCount - 1);
       }
 
       updateSelectionBar();
     });
   });
 
-  if (experienceDots.length && experiences.length) {
-    experienceDots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        setExperience(index);
-        if (experienceIntervalId) {
-          clearInterval(experienceIntervalId);
-        }
-        experienceIntervalId = setInterval(() => {
-          const nextIndex = (currentExperienceIndex + 1) % experiences.length;
-          setExperience(nextIndex);
-        }, 5000);
-      });
-    });
-
-    experienceIntervalId = setInterval(() => {
-      const nextIndex = (currentExperienceIndex + 1) % experiences.length;
-      setExperience(nextIndex);
-    }, 5000);
-
-    // Initialize first state
-    setExperience(0);
-  }
-
-  // --- Checkout page: wire up complete booking and itinerary link ---
+  // --- Checkout button + itinerary toast ---
   const completeBookingBtn = document.querySelector('.complete-booking-btn');
   if (completeBookingBtn) {
     completeBookingBtn.addEventListener('click', (event) => {
