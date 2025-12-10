@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f46566a6-b8eb-4180-af04-8b2d3163cc73" name="Changes" comment="Refactored inline styles into reusable CSS classes, introduced CSS variables for colors, spacing, and transitions, and updated all pages for consistent styling. Improved accessibility and readability by replacing `button` elements with semantic `a` tags where appropriate. Enhanced JavaScript to clean up intervals and prevent memory leaks.">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="f46566a6-b8eb-4180-af04-8b2d3163cc73" name="Changes" comment="Removed project configuration files (.editorconfig, .idea files, .iml file), deleted `package.json` and `package-lock.json` along with associated dependencies, and cleaned up unused assets to reset the project setup.">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/D479Prototype_webpage.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/img_citations.rtf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vendor/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/travel-info.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +74,6 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;cleaned-codebase&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/csromance/IdeaProjects/D479_Prototype/D479Prototype_webpage&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -135,6 +124,17 @@
       <workItem from="1765218256914" duration="11844000" />
       <workItem from="1765323265940" duration="17005000" />
       <workItem from="1765345685940" duration="31000" />
+      <workItem from="1765387139385" duration="1668000" />
+      <workItem from="1765397799006" duration="3907000" />
+      <workItem from="1765401715814" duration="103000" />
+      <workItem from="1765401820593" duration="45000" />
+      <workItem from="1765401873364" duration="19000" />
+      <workItem from="1765402093663" duration="14000" />
+      <workItem from="1765402130744" duration="262000" />
+      <workItem from="1765402402585" duration="706000" />
+      <workItem from="1765403121578" duration="27000" />
+      <workItem from="1765403150800" duration="105000" />
+      <workItem from="1765403330679" duration="340000" />
     </task>
     <task id="LOCAL-00001" summary="Created all prototype web pages and added initial HTML. Added basic css to style.css sheet">
       <option name="closed" value="true" />
@@ -224,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765345014701</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Removed project configuration files (.editorconfig, .idea files, .iml file), deleted `package.json` and `package-lock.json` along with associated dependencies, and cleaned up unused assets to reset the project setup.">
+      <option name="closed" value="true" />
+      <created>1765387188207</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1765387188207</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +261,8 @@
     <MESSAGE value="Redesigned &quot;More to Explore&quot; section with new grid layout, updated card structures, new background images, and added rainforest waterfall asset. Webpage has reached finished state 2." />
     <MESSAGE value="Added a dedicated &quot;Image Citations&quot; page with detailed photo credits and attributions. Updated footer links across all pages to include a link to the citations page. Deleted unused image assets for optimization." />
     <MESSAGE value="Refactored inline styles into reusable CSS classes, introduced CSS variables for colors, spacing, and transitions, and updated all pages for consistent styling. Improved accessibility and readability by replacing `button` elements with semantic `a` tags where appropriate. Enhanced JavaScript to clean up intervals and prevent memory leaks." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored inline styles into reusable CSS classes, introduced CSS variables for colors, spacing, and transitions, and updated all pages for consistent styling. Improved accessibility and readability by replacing `button` elements with semantic `a` tags where appropriate. Enhanced JavaScript to clean up intervals and prevent memory leaks." />
+    <MESSAGE value="Removed project configuration files (.editorconfig, .idea files, .iml file), deleted `package.json` and `package-lock.json` along with associated dependencies, and cleaned up unused assets to reset the project setup." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed project configuration files (.editorconfig, .idea files, .iml file), deleted `package.json` and `package-lock.json` along with associated dependencies, and cleaned up unused assets to reset the project setup." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
